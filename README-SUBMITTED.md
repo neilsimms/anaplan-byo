@@ -43,3 +43,11 @@ curl --location --request PUT 'http://localhost/dashboards/6' \
 
 # Delete the record
 curl --location --request DELETE 'http://localhost/dashboards/6'
+
+## Viewing data
+
+```
+docker run -it --network bring-your-own-interview_default --rm mysql:5 mysql -hbring-your-own-interview_mysql-db_1 -uroot -ptest123
+use definitions
+select * from dashboards;
+```

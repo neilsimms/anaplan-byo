@@ -52,11 +52,3 @@ scripts will be run automatically.
 To apply any script changes when the database is already running you will need to stop the running database container
 and destroy it. Running `docker-compose down` will stop the environment and destroy the containers for you, the next
 time you bring the environment up the containers will be created again.
-
-## Viewing data
-
-```
-docker run -it --network bring-your-own-interview_default --rm mysql:5 mysql -hbring-your-own-interview_mysql-db_1 -uroot -ptest123
-use definitions
-select * from dashboards;
-```
